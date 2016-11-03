@@ -6,14 +6,19 @@
       text-align:center;
       margin: 20% auto;
           }
+      button{
+        margin-bottom: 10px;
+      }
   </style>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
   </head>
   <body>
   <main>
+  <button id="reload" >Reload</button>
+  <br>
   </main>
   <script type="text/javascript">
-  $(document).ready(function(){
+$(document).ready(function(){
    for (var i = 0; i < 16; i++) {
     for (var j = 0; j < 16; j++) {
   $("main").append("<div class='gridbox'></div>");
@@ -21,11 +26,23 @@
 }
   $("main").append("<br/>");
 }
-  $(".gridbox").css({"height":"25px", "width":"25px", "border": "1px solid black", /*"float":"left"*/"display":"inline-block"});
-
-  });  
 
 
+  $(".gridbox").css({"height":"30px", "width":"30px", "border": "1px solid black", /*"float":"left"*/"display":"inline-block"});
+  $("div").hover(
+    function(){
+    $(this).css({"background-color":"blue"});
+   
+    /*This would remove the color as soon as the user 'unhovers' 
+    function(){
+    $(this).css({"background-color": "white"});
+    }*/
+  });
+  $("#reload").click(function(){
+     $("main").html("Basic Reload Button Works");
+  });
+});
+  
 
 
   </script>
