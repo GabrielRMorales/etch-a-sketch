@@ -1,0 +1,34 @@
+body, #menu {
+    margin: auto 0;
+    text-align: center;
+    background-color: gray;
+}
+
+button {
+    display:block;
+    margin: 30px auto;
+
+}
+
+#grid {
+border: 1px solid black;
+  display: inline-block;
+  min-height: 960px;
+  min-width: 960px;
+  box-sizing: content-box;
+  margin-bottom: 40px;
+}
+.container {
+    white-space: nowrap;
+    box-sizing: border-box;
+}
+
+.grid-box {
+    background-color: beige;   
+    display: inline-block;
+    border: 1px solid black;
+    box-sizing: border-box;
+}
+.hovered-grid-box {
+    background-color: black;
+}
